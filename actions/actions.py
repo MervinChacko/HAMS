@@ -60,7 +60,7 @@ class Disease_request(Action):
         #dispatcher.utter_message(symptom)
         symptom = tracker.get_slot("symptom")
 
-        url = 'http://192.168.1.7:5000/api/'
+        url = 'http://localhost:5055/api/'
 
         data = symptom
         j_data = json.dumps(data)
