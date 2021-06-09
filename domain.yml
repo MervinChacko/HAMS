@@ -17,6 +17,9 @@ intents:
 - ask_eat_healthy
 - ask_exercise
 - ask_sick
+- find_creator
+- out_of_scope
+- how_bot
 entities:
 - city
 - symptom
@@ -29,9 +32,9 @@ slots:
     influence_conversation: true
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hello there! How are you?
   utter_happy:
-  - text: Great, carry on!
+  - text: Great😊, carry on!
   utter_welcome:
   - text: Welcome
   utter_cheer_up:
@@ -42,7 +45,7 @@ responses:
   utter_goodbye:
   - text: Okay Bye.
   utter_iamabot:
-  - text: I am a bot created using Rasa. I can help you locate a hospital in a city and also to find a disease from symptoms known.
+  - text: I am a HAMSbot created using Rasa. I can help you locate a hospital in a city and also to find a disease from symptoms known.
   utter_stress_info:
   - text: "It is okay to feel overwhelmed. If you notice that you're showing signs of stress, here are some things you can do to help yourself: Leave the room. ... Listen to your favourite music. ... Do some breathing exercises. ... Write it out. ... Meditate. ... Watch something funny. ... Exercise. ... Write down 3 things you're grateful for. ... Talk about this to somebody. ..."
   utter_exercise_info:
@@ -52,17 +55,26 @@ responses:
   utter_ask_city:
   - text: Can you provide your city name please?🌍
   utter_okay:
-  - text: okay
+  - text: "okay😊"
   utter_herearehospital:
   - text: 'Here are the hospitals:'
   utter_sick:
   - text: "Please tell me the symptoms your experiencing. I recommend you to enter the maximum symptoms you can so that I can identify the disease correctly"
   utter_go_hospital:
-  - text: "Do you want to go to a hospital?"
+  - text: "Do you want to go to a hospital🚑?"
   utter_recommend_doctor:
   - text: "If you don't want to go to a hospital, I recommend you to consult with a doctor using the HAMS application"
+  utter_creator:
+  - text: "I was created by a group of college students as part of their final year project 😊"
+  utter_out_scope:
+  - text: "Hmm..I'm not sure I understand. If you want I can help you to find a hospital or search for a disease"
+  utter_how_bot:
+  - text: "I am doing good! Thanks for asking😊"
+  utter_enter_again:
+  - text: "Okay enter again"
 
 actions:
+- disease_request_1 
 - disease_request
 - find_hospital
 
