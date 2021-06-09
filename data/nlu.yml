@@ -1,0 +1,508 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - hello there
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello
+    - lets go
+    - lets begin
+    - good morning
+    - good evening
+    - good afternoon
+    - hey dude
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - hi
+    - Hii
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - I am feeling good
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - Am okay
+    - am doing good
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - I am feeling sad
+    - I am feeling unhappy
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Bye!
+    - Goodbye
+    - See you later
+    - Bye bot
+    - Goodbye friend
+    - bye
+    - bye for now
+    - catch you later
+    - gotta go
+    - See you
+    - goodnight
+    - have a nice day
+    - i'm off
+    - see you later alligator
+    - we'll speak soon
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - ya
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yes please
+    - sure
+    - okay
+    - yeah
+    - yep
+    - yup
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - Don't do that
+    - no please
+    - no need
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - who are you
+    - bot?
+
+- intent: ask_lower_stress
+  examples: |
+    - How to reduce stress?
+    - What do I do if I am too stressed?
+    - How can I lower my stress level?
+    - What are some good ways to lower stress?
+    - What are good ways to relax?
+    - What are some things I can do to lower my stress?
+    - How do I relax?
+    - I am feeling stressed
+    - I am feeling overwhelmed
+
+- intent: ask_eat_healthy
+  examples: |
+    - What's considered a healthy diet
+    - What is a good diet
+    - How do I follow a healthy diet
+    - Tell me about a healthy diet
+    - What's an example of a healthy diet?
+    - How do I eat healthy?
+    - What should I eat
+
+- intent: ask_exercise
+  examples: |
+    - How much exercise should I be getting?
+    - What's a good amount of exercise for someone in their thirties?
+    - How much exercise is recommended?
+    - Is walking once a day enough exercise?
+    - How much exercise should I do everyday?
+    - How many times per week should I go to the gym?
+    - Should I workout everyday
+
+
+- intent: inform
+  examples: |
+    - I live in [Port Blair]{"entity":"city"}
+    - My house is in [Hyderabad]{"entity":"city"}
+    - My city is [Nampally]{"entity":"city"}
+    - We live in [Secunderabad]{"entity":"city"}
+    - Home in [Kadapa]{"entity":"city"}
+    - My family is in [Kurnool]{"entity":"city"}
+    - [Rajahmundry]{"entity":"city"}
+    - [Vijayawada]{"entity":"city"}
+    - [Visakhapatnam]{"entity":"city"}
+    - [Daporijo]{"entity":"city"}
+    - [Itanagar]{"entity":"city"}
+    - [Tawang]{"entity":"city"}
+    - [Kolkata]{"entity":"city"}
+    - [Delhi]{"entity":"city"}
+    - [Lucknow]{"entity":"city"}
+    - [Noida]{"entity":"city"}
+    - [Kanpur]{"entity":"city"}
+    - [Kochi]{"entity":"city"}
+    - [Pune]{"entity":"city"}
+    - [Meerut]{"entity":"city"}
+    - [Barpeta]{"entity":"city"}
+    - [Dibrugarh]{"entity":"city"}
+    - [Ghungoor]{"entity":"city"}
+    - [Guwahati]{"entity":"city"}
+    - [Jorhat]{"entity":"city"}
+    - [Tezpur]{"entity":"city"}
+    - [Muzaffarpur]{"entity":"city"}
+    - [Darbhanga]{"entity":"city"}
+    - [Gaya]{"entity":"city"}
+    - [Patna]{"entity":"city"}
+    - [Chandigarh]{"entity":"city"}
+    - [Mohali]{"entity":"city"}
+    - [Bhilai]{"entity":"city"}
+    - [Bilaspur]{"entity":"city"}
+    - [Jagdalpur]{"entity":"city"}
+    - [Raipur]{"entity":"city"}
+    - [Silvassa]{"entity":"city"}
+    - [Daman]{"entity":"city"}
+    - [Delhi]{"entity":"city"}
+    - [New Delhi]{"entity":"city"}
+    - [Goa]{"entity":"city"}
+    - [Panjim]{"entity":"city"}
+    - [Ahmedabad]{"entity":"city"}
+    - [Anand]{"entity":"city"}
+    - [Bharuch]{"entity":"city"}
+    - [Bhavnagar]{"entity":"city"}
+    - [Godhra]{"entity":"city"}
+    - [Jamnagar]{"entity":"city"}
+    - [karamsad]{"entity":"city"}
+    - [Rajkot]{"entity":"city"}
+    - [Sanand]{"entity":"city"}
+    - [Surat]{"entity":"city"}
+    - [Surendranagar]{"entity":"city"}
+    - [Vadodara]{"entity":"city"}
+    - [Agroha]{"entity":"city"}
+    - [Ambala]{"entity":"city"}
+    - [Bhiwani]{"entity":"city"}
+    - [Faridabad]{"entity":"city"}
+    - [Gurgaon]{"entity":"city"}
+    - [Fatehabad]{"entity":"city"}
+    - [Hisar]{"entity":"city"}
+    - [Jhajjar]{"entity":"city"}
+    - [Jind]{"entity":"city"}
+    - [Karnal]{"entity":"city"}
+    - [Kurukshetra]{"entity":"city"}
+    - [Mahendergarh]{"entity":"city"}
+    - [Narnaul]{"entity":"city"}
+    - [Palwal]{"entity":"city"}
+    - [Panchkula]{"entity":"city"}
+    - [Panipat]{"entity":"city"}
+    - [Rewari]{"entity":"city"}
+    - [Rohtak]{"entity":"city"}
+    - [Sirsa]{"entity":"city"}
+    - [Sonipat]{"entity":"city"}
+    - [Yamunanagar]{"entity":"city"}
+    - [Kangra]{"entity":"city"}
+    - [Shimla]{"entity":"city"}
+    - [Jammu]{"entity":"city"}
+    - [Srinagar]{"entity":"city"}
+    - [Hazaribagh]{"entity":"city"}
+    - [Jamshedpur]{"entity":"city"}
+    - [Ranchi]{"entity":"city"}
+    - [Bengaluru]{"entity":"city"}
+    - [Mangalore]{"entity":"city"}
+    - [Alappuzha]{"entity":"city"}
+    - [Cochin]{"entity":"city"}
+    - [Kannur]{"entity":"city"}
+    - [Karakonam]{"entity":"city"}
+    - [Kochi]{"entity":"city"}
+    - [Kolencherry]{"entity":"city"}
+    - [Kollam]{"entity":"city"}
+    - [Kottayam]{"entity":"city"}
+    - [Kozhikode]{"entity":"city"}
+    - [Modakkallur]{"entity":"city"}
+    - [Palakkad]{"entity":"city"}
+    - [Pathanamthitta]{"entity":"city"}
+    - [Perintalmanna]{"entity":"city"}
+    - [Thiruvalla]{"entity":"city"}
+    - [Thiruvananthapuram]{"entity":"city"}
+    - [Thrissur]{"entity":"city"}
+    - [Venjaramoodu]{"entity":"city"}
+    - [Kavaratti]{"entity":"city"}
+    - [Indore]{"entity":"city"}
+    - [Mumbai]{"entity":"city"}
+    - [Pune]{"entity":"city"}
+    - [Thane]{"entity":"city"}
+    - [Imphal]{"entity":"city"}
+    - [Manipur]{"entity":"city"}
+    - [Shillong]{"entity":"city"}
+    - [Aizawl]{"entity":"city"}
+    - [Kohima]{"entity":"city"}
+    - [Behrampur]{"entity":"city"}
+    - [Bhubaneswar]{"entity":"city"}
+    - [Burla]{"entity":"city"}
+    - [Cuttack]{"entity":"city"}
+    - [Rourkela]{"entity":"city"}
+    - [Gorimedu]{"entity":"city"}
+    - [Kalapet]{"entity":"city"}
+    - [Kudupakkam]{"entity":"city"}
+    - [Madagadipet]{"entity":"city"}
+    - [Pangoor]{"entity":"city"}
+    - [Pillaiyarkuppam]{"entity":"city"}
+    - [Puducherry]{"entity":"city"}
+    - [Amritsar]{"entity":"city"}
+    - [Hoshiarpur]{"entity":"city"}
+    - [Jalandhar]{"entity":"city"}
+    - [Ludhiana]{"entity":"city"}
+    - [Patiala]{"entity":"city"}
+    - [Ropar]{"entity":"city"}
+    - [Zirakpur]{"entity":"city"}
+    - [Ajmer]{"entity":"city"}
+    - [Jaipur]{"entity":"city"}
+    - [Jodhpur]{"entity":"city"}
+    - [Gangtok]{"entity":"city"}
+    - [Chennai]{"entity":"city"}
+    - [Kanyakumari]{"entity":"city"}
+    - [Salem]{"entity":"city"}
+    - [Vellore]{"entity":"city"}
+    - [Agartala]{"entity":"city"}
+    - [Agra]{"entity":"city"}
+    - [Ghaziabad]{"entity":"city"}
+    - [Greater Noida]{"entity":"city"}
+    - [Hathras]{"entity":"city"}
+    - [Kanpur]{"entity":"city"}
+    - [Lucknow]{"entity":"city"}
+    - [Meerut]{"entity":"city"}
+    - [Moradabad]{"entity":"city"}
+    - [Muzaffarnagar]{"entity":"city"}
+    - [Noida]{"entity":"city"}
+    - [Saharanpur]{"entity":"city"}
+    - [Varanasi]{"entity":"city"}
+    - [Dehradun]{"entity":"city"}
+    - [Haldwani]{"entity":"city"}
+    - [Rishikesh]{"entity":"city"}
+    - [Roorkee]{"entity":"city"}
+    - [Kolkata]{"entity":"city"}
+
+
+- intent: search_provider
+  examples: |
+    - I need a hospital in [Delhi]{"entity":"city"}
+    - Hospital in [Tawang]{"entity":"city"}
+    - I need a hospital in [Lucknow]{"entity":"city"}
+    - Find me a hospital in [Noida]{"entity":"city"}
+    - Show me a hospital in [Gurgaon]{"entity":"city"} city
+    - I am hurt. I am need of a hospital in [Kanpur]{"entity":"city"}
+    - Find me hospital in [Kochi]{"entity":"city"}
+#    - I live in [Meerut]{"entity":"city"}
+
+- intent: need_hospital
+  examples: |
+    - I need a hospital
+    - Hospital
+    - Find me a hospital
+    - Show me a hospital
+    - I am hurt. I am in need of a hospital
+
+- intent: thanks
+  examples: |
+    - Thanks
+    - Thank you
+    - Thank you so much
+    - Thanks bot
+    - Thanks for that
+    - cheers
+    - cheers bro
+    - ok thanks!
+    - perfect thank you
+    - thanks a bunch for everything
+    - thanks for the help
+    - thanks a lot
+    - amazing, thanks
+    - cool, thanks
+    - cool thank you
+    - Thank you bye
+
+- intent: symp_disease
+  examples: |
+    - I am having [continuous feel of urine]{"entity":"symptom"}, [bladder discomfort]{"entity":"symptom"} and [foul smell of urine]{"entity":"symptom"}
+    - I am having [back pain]{"entity":"symptom"}, [painful walking]{"entity":"symptom"} and [muscle weakness]{"entity":"symptom"}
+    - I have [continuous feel of urine]{"entity":"symptom"}, [bladder discomfort]{"entity":"symptom"} and [foul smell of urine]{"entity":"symptom"}
+    - [continuous feel of urine]{"entity":"symptom"}, [bladder discomfort]{"entity":"symptom"} and [foul smell of urine]{"entity":"symptom"}
+    - I am having [bloody stool]{"entity":"symptom"}, [abdominal pain]{"entity":"symptom"} and [loss of appetite]{"entity":"symptom"}
+    - I have [loss of balance]{"entity":"symptom"}, [high fever]{"entity":"symptom"} and [mild fever]{"entity":"symptom"}
+    - I am having [itching]{"entity":"symptom"}, [skin rash]{"entity":"symptom"}, [nodal skin eruptions]{"entity":"symptom"}
+    - [continuous sneezing]{"entity":"symptom"}, [shivering]{"entity":"symptom"}, [chills]{"entity":"symptom"}
+    - [joint pain]{"entity":"symptom"}, [stomach pain]{"entity":"symptom"}, [acidity]{"entity":"symptom"}
+    - [ulcers on tongue]{"entity":"symptom"}, [muscle wasting]{"entity":"symptom"}, [vomiting]{"entity":"symptom"}
+    - [burning micturition]{"entity":"symptom"}, [spotting urination]{"entity":"symptom"}, [fatigue]{"entity":"symptom"}
+    - [weight gain]{"entity":"symptom"}, [anxiety]{"entity":"symptom"}, [cold hands and feets]{"entity":"symptom"}
+    - [mood swings]{"entity":"symptom"}, [weight loss]{"entity":"symptom"} and [restlessness]{"entity":"symptom"}
+    - I am experiencing [lethargy]{"entity":"symptom"}, [patches in throat]{"entity":"symptom"}, [irregular sugar level]{"entity":"symptom"}
+    - I am experiencing [cough]{"entity":"symptom"}, [high fever]{"entity":"symptom"} and [sunken eyes]{"entity":"symptom"}
+    - I am suffering [breathlessness]{"entity":"symptom"}, [sweating]{"entity":"symptom"}, [dehydration]{"entity":"symptom"}
+    - I am suffering [indigestion]{"entity":"symptom"}, [headache]{"entity":"symptom"} and [yellowish skin]{"entity":"symptom"}
+    - I am suffering from [dark urine]{"entity":"symptom"}, [nausea]{"entity":"symptom"}, [loss of appetite]{"entity":"symptom"}
+    - I am suffering from [pain behind the eyes]{"entity":"symptom"}, [back pain]{"entity":"symptom"} and [constipation]{"entity":"symptom"}
+    - I have [abdominal pain]{"entity":"symptom"}, [diarrhoea]{"entity":"symptom"}, [mild fever]{"entity":"symptom"}
+    - Symptoms are [yellow urine]{"entity":"symptom"}, [yellowing of eyes]{"entity":"symptom"}, [acute liver failure]{"entity":"symptom"}
+    - Symptoms [fluid overload]{"entity":"symptom"}, [swelling of stomach]{"entity":"symptom"} and [swelled lymph nodes]{"entity":"symptom"}
+    - I don't feel well, I have [malaise]{"entity":"symptom"}, [blurred and distorted vision]{"entity":"symptom"}, [phlegm]{"entity":"symptom"}
+    - I don't feel well, I have [throat irritation]{"entity":"symptom"}, [redness of eyes]{"entity":"symptom"} and [sinus pressure]{"entity":"symptom"}
+    - My child is suffering from [runny nose]{"entity":"symptom"}, [congestion]{"entity":"symptom"}, [chest pain]{"entity":"symptom"}
+    - My child is suffering from [weakness in limbs]{"entity":"symptom"}, [fast heart rate]{"entity":"symptom"} and [pain during bowel movements]{"entity":"symptom"}
+    - I have really bad [pain in anal region]{"entity":"symptom"}, [bloody stool]{"entity":"symptom"}, [irritation in anus]{"entity":"symptom"}
+    - I have really bad [neck pain]{"entity":"symptom"}, [dizziness]{"entity":"symptom"} and [cramps]{"entity":"symptom"}
+    - For the last few days I have had [bruising]{"entity":"symptom"}, [obesity]{"entity":"symptom"} and [swollen legs]{"entity":"symptom"}
+    - For the last few days I have had [swollen blood vessel]{"entity":"symptom"}, [puffy face and eyes]{"entity":"symptom"}, [enlarged thyroid]{"entity":"symptom"}
+    - My symptoms are [brittle nails]{"entity":"symptom"}, [swollen extremeties]{"entity":"symptom"} and [excessive hunger]{"entity":"symptom"}
+    - My symptoms are [extra marital contacts]{"entity":"symptom"}, [drying and tingling lips]{"entity":"symptom"}, [slurred speech]{"entity":"symptom"}
+    - My wife is suffering from [knee pain]{"entity":"symptom"}, [hip joint pain]{"entity":"symptom"}, [muscle weakness]{"entity":"symptom"}
+    - My wife is suffering from [stiff neck]{"entity":"symptom"}, [swelling joints]{"entity":"symptom"} and [movement stiffness]{"entity":"symptom"}
+    - My husband is suffering from [spinning movements]{"entity":"symptom"}, [loss of balance]{"entity":"symptom"}, [unsteadiness]{"entity":"symptom"}
+    - My husband is suffering from [weakness of one body side]{"entity":"symptom"}, [loss of smell]{"entity":"symptom"} and [bladder discomfort]{"entity":"symptom"}
+    - My brother is suffering from [foul smell of urine]{"entity":"symptom"}, [continuous feel of urine]{"entity":"symptom"}, [passage of gases]{"entity":"symptom"}
+    - My brother is suffering from [internal itching]{"entity":"symptom"} and [depression]{"entity":"symptom"}
+    - My sister is suffering from [irritability]{"entity":"symptom"}, [muscle pain]{"entity":"symptom"}, [altered sensorium]{"entity":"symptom"}
+    - My sister is suffering from [red spots over body]{"entity":"symptom"}, [belly pain]{"entity":"symptom"} and [abnormal menstruation]{"entity":"symptom"}
+    - For the last few days I have had [dischromic  patches]{"entity":"symptom"}, [watering from eyes]{"entity":"symptom"}, [increased appetite]{"entity":"symptom"}
+    - For the last few days I have had [polyuria]{"entity":"symptom"}, [family history]{"entity":"symptom"} and [mucoid sputum]{"entity":"symptom"}
+    - I got [rusty sputum]{"entity":"symptom"}, [lack of concentration]{"entity":"symptom"}, [visual disturbances]{"entity":"symptom"}
+    - I got [receiving blood transfusion]{"entity":"symptom"}, [receiving unsterile injections]{"entity":"symptom"} and [coma]{"entity":"symptom"} find the disease
+    - I have [stomach bleeding]{"entity":"symptom"}, [distention of abdomen]{"entity":"symptom"}, [history of alcohol consumption]{"entity":"symptom"}
+    - [fluid overload]{"entity":"symptom"}, [blood in sputum]{"entity":"symptom"}, [prominent veins on calf]{"entity":"symptom"}
+    - [palpitations]{"entity":"symptom"}, [painful walking]{"entity":"symptom"}, [pus filled pimples]{"entity":"symptom"}
+    - [blackheads]{"entity":"symptom"}, [scurring]{"entity":"symptom"}, [skin peeling]{"entity":"symptom"}
+    - [silver like dusting]{"entity":"symptom"}, [small dents in nails]{"entity":"symptom"}, [inflammatory nails]{"entity":"symptom"}
+    - [blister]{"entity":"symptom"}, [red sore around nose]{"entity":"symptom"}, [yellow crust ooze]{"entity":"symptom"}
+
+- intent: ask_sick
+  examples: |
+    - I am sick
+    - I am unwell
+    - am not well
+    - I am having a disease
+    - help me to find a sickness
+    - help me to find a disease
+
+- intent: find_creator
+  examples: |
+    - who is your creator?
+    - Who created you
+    - Who developed you
+
+
+- intent: out_of_scope
+  examples: |
+    - please help with my ice cream it's dripping
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    - i want a non dripping ice cream
+    - someone call the police i think the bot died
+    - show me a picture of a chicken
+    - neither
+    - dance with me
+    - sing a song for me
+    - You should have manners
+    - I want french cuisine
+    - i am hungry
+    - moon
+    - fly
+    - mosquito
+    - restaurant
+    - can i be shown a gluten free restaurant
+    - i don't care!!!!
+    - i do not care how are you
+    - again?
+    - oh wait i gave you my work email address can i change it?
+    - hang on let me find it
+    - stop it, i do not care!!!
+    - how come?
+    - I changed my mind
+    - what?
+    - did i break you
+    - that link doesn't work!
+    - you already have that
+    - this is a really frustrating experience
+    - no stop
+    - give me food
+    - i want food
+    - Can I ask you questions first?
+    - is it a wasteland full of broken robot parts?
+    - can we keep chatting?
+    - talk to me
+    - who is your favourite robot?
+    - can you help me to build a bot
+    - I am so lazy
+    - you are mad
+    - yes your honour
+    - I will beat you
+    - lets go for a drive
+    - lets take a walk
+    - you wanna fight
+    - lets send a rocket to mars
+    - just go
+    - get lost
+    - blah blah
+
+- intent: how_bot
+  examples: |
+    - How are you
+    - Howdy
+    - are you doing well
+    - are you alright
+    - you okay?
+    - you good?
+#- intent: affirm
+#  examples: |
+#    - yes
+#    - indeed
+#    - of course
+#    - that sounds good
+#    - correct
+#- intent: deny
+#  examples: |
+#    - no
+#    - never
+#    - I don't think so
+#    - don't like that
+#    - no way
+#    - not really
+
+#- intent: bot challenge
+#  examples: |
+#    - are you a bot?
+#    - are you a human?
+#    - am I talking to a bot?
+#    - am I talking to a human?
+#    - Are you a bot

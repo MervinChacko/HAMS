@@ -1,0 +1,428 @@
+version: "2.0"
+stories:
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Bot Challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: ask stress question
+  steps:
+  - intent: ask_lower_stress
+  - action: utter_stress_info
+
+- story: ask diet question
+  steps:
+  - intent: ask_eat_healthy
+  - action: utter_diet_info
+
+- story: ask exercise
+  steps:
+  - intent: ask_exercise
+  - action: utter_exercise_info
+
+- story: creator
+  steps:
+  - intent: find_creator
+  - action: utter_creator
+
+- story: out of scope questions
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_scope
+
+- story: bot health
+  steps:
+  - intent: how_bot
+  - action: utter_how_bot
+
+- story: hospital search with City
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_provider
+    entities:
+      - city: "Kochi"
+  - action: utter_herearehospital
+  - action: find_hospital
+  - slot_was_set:
+      - city: Kochi
+  - intent: thanks
+  - action: utter_welcome
+#  - action: utter_okay
+
+
+- story: hospital search with seperate City
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: need_hospital
+  - action: utter_ask_city
+  - intent: inform
+    entities:
+      - city: "Kochi"
+  - action: utter_herearehospital
+  - action: find_hospital
+  - slot_was_set:
+      - city: Kochi
+  - intent: thanks
+  - action: utter_welcome
+#  - action: find_hospital
+
+- story: Disease test
+  steps:
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: affirm
+  - action: utter_enter_again
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request
+  - action: utter_go_hospital
+  - intent: affirm
+  - action: utter_ask_city
+  - intent: inform
+    entities:
+      - city: "Kochi"
+  - action: utter_herearehospital
+  - action: find_hospital
+  - slot_was_set:
+      - city: Kochi
+  - intent: thanks
+  - action: utter_welcome
+
+- story: Disease test 2
+  steps:
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: affirm
+  - action: utter_enter_again
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request
+  - action: utter_go_hospital
+  - intent: deny
+  - action: utter_recommend_doctor
+  - intent: thanks
+  - action: utter_welcome
+
+- story: hospital search with City and disease
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_sick
+  - action: utter_sick
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: affirm
+  - action: utter_enter_again
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request
+  - action: utter_go_hospital
+  - intent: affirm
+  - action: utter_ask_city
+  - intent: inform
+    entities:
+      - city: "Kochi"
+  - action: utter_herearehospital
+  - action: find_hospital
+  - slot_was_set:
+      - city: Kochi
+  - intent: thanks
+  - action: utter_welcome
+#
+- story: disease prediction no hospital search
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_sick
+  - action: utter_sick
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: affirm
+  - action: utter_enter_again
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request
+  - action: utter_go_hospital
+  - intent: deny
+  - action: utter_recommend_doctor
+  - intent: thanks
+  - action: utter_welcome
+
+- story: Disease test no retry
+  steps:
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: deny
+  - action: utter_go_hospital
+  - intent: affirm
+  - action: utter_ask_city
+  - intent: inform
+    entities:
+      - city: "Kochi"
+  - action: utter_herearehospital
+  - action: find_hospital
+  - slot_was_set:
+      - city: Kochi
+  - intent: thanks
+  - action: utter_welcome
+
+- story: Disease test 2 no retry
+  steps:
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: deny
+  - action: utter_go_hospital
+  - intent: deny
+  - action: utter_recommend_doctor
+  - intent: thanks
+  - action: utter_welcome
+
+- story: hospital search with City and disease no retry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_sick
+  - action: utter_sick
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: deny
+  - action: utter_go_hospital
+  - intent: affirm
+  - action: utter_ask_city
+  - intent: inform
+    entities:
+      - city: "Kochi"
+  - action: utter_herearehospital
+  - action: find_hospital
+  - slot_was_set:
+      - city: Kochi
+  - intent: thanks
+  - action: utter_welcome
+#
+- story: disease prediction no hospital search no retry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_sick
+  - action: utter_sick
+  - intent: symp_disease
+    entities:
+    - symptom: continuous_sneezing
+    - symptom: shivering
+    - symptom: chills
+  - slot_was_set:
+    - symptom:
+      - continuous_sneezing
+      - shivering
+      - chills
+  - action: disease_request_1
+  - intent: deny 
+  - action: utter_go_hospital
+  - intent: deny
+  - action: utter_recommend_doctor
+  - intent: thanks
+  - action: utter_welcome
+
+# - story: Disease re-entry
+#   steps:
+#   - intent: symp_disease
+#     entities:
+#     - symptom: continuous_sneezing
+#     - symptom: shivering
+#     - symptom: chills
+#   - slot_was_set:
+#     - symptom:
+#       - continuous_sneezing
+#       - shivering
+#       - chills
+#   - action: disease_request
+#   - intent: affirm
+#   - action: utter_enter_again
+#   - intent: symp_disease
+#     entities:
+#     - symptom: continuous_sneezing
+#     - symptom: shivering
+#     - symptom: chills
+#   - slot_was_set:
+#     - symptom:
+#       - continuous_sneezing
+#       - shivering
+#       - chills
+#   - action: disease_request
+#   - action: utter_go_hospital
+#   - intent: affirm
+#   - action: utter_ask_city
+#   - intent: inform
+#     entities:
+#       - city: "Kochi"
+#   - action: utter_herearehospital
+#   - action: find_hospital
+#   - slot_was_set:
+#       - city: Kochi
+#   - intent: thanks
+#   - action: utter_welcome
+# - story: interactive_story_1
+#   steps:
+#   - intent: symp_disease
+#     entities:
+#     - symptom: constipation
+#   - slot_was_set:
+#     - symptom:
+#       - constipation
+#   - action: disease_request
+#   - intent: symp_disease
+#     entities:
+#     - symptom: joint_pain
+#   - slot_was_set:
+#     - symptom:
+#       - joint_pain
+#   - action: disease_request
+#   - intent: symp_disease
+#     entities:
+#     - symptom: continuous_sneezing
+#     - symptom: shivering
+#     - sympton: chills
+#   - slot_was_set:
+#     - symptom:
+#       - continuous_sneezing
+#       - shivering
+#       - chills
+#   - action: disease_request
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: symp_disease
+#     entities:
+#     - symptom: vomiting
+#     - symptom: dizziness
+#     - symptom: cramps
+#   - slot_was_set:
+#     - symptom:
+#       - vomiting
+#       - dizziness
+#       - cramps
+#   - action: disease_request
